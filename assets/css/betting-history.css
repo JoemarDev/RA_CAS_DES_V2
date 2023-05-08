@@ -1,0 +1,117 @@
+.table-showcase-header-body {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #8a8b95;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.table-showcase-header-body span,
+label {
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.table-showcase-header-body img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+
+.table-showcase-flex-lists {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.table-showcase-flex-lists.header .table-child-item {
+    margin: 0;
+    border-bottom: 2px solid #c49a49;
+    justify-content: center !important;
+}
+
+
+.table-showcase-flex-lists .table-child-item {
+    background: linear-gradient(#212121, #0d0d0d);
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin: 2px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.table-lists-showcase-icon-sm {
+    height: 20px;
+    transform: scale(0.8);
+    object-fit: cover;
+
+    position: relative;
+    top: 1px;
+}
+
+.table-showcase-flex-lists .table-child-item.active-bg {
+    background: #996806;
+}
+
+.table-showcase-flex-lists .table-child-item div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-showcase-flex-lists .table-child-item span {
+    margin-right: 5px;
+}
+
+.line-divider {
+    border-top: 2px solid #855b08;
+    margin: 10px 0px;
+}
+
+.table-lists-showcase-icon {
+    height: 20px;
+    transform: scale(1.5);
+    object-fit: cover;
+    margin: 0px 10px;
+    position: relative;
+    top: 1px;
+}
+
+
+.footer-statistics {
+    display: flex;
+    color: #c6c6c6;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-statistics input {
+    margin-right: 10px;
+}
+
+.footer-statistics label {
+    font-size: 12px;
+    font-weight: 300;
+    margin-right: 20px;
+}
+
+.footer-statistics button {
+    background: #3a3b42;
+    width: 67px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    border: 0;
+    font-weight: 700;
+    margin-left: auto;
+    border-radius: 5px;
+}

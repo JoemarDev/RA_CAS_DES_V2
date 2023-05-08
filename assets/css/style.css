@@ -246,6 +246,7 @@ select:focus {
 
 
 .brand {
+    cursor: pointer;
     top: 0px;
     left: 50%;
     width: 260px;
@@ -764,4 +765,245 @@ label.title:hover {
 
 .dialog-tabs:hover {
     color: #ad8734;
+}
+
+
+
+
+/* NEW CSS DESIGNS */
+.text-yellow {
+    color: #dac179 !important;
+}
+
+.page-banner-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #dac179;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #100b01;
+    border: 1px solid #443209;
+    color: #dac179;
+    font-weight: 600;
+    font-size: 24px;
+
+}
+
+.bg-primary-only {
+    /* border: 1px solid #e1ca84; */
+    background: #e1ca84 !important;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%) !important;
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%) !important;
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%) !important;
+    color: #030303;
+}
+
+.btn-primary-normal {
+    border: 1px solid #e1ca84;
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
+    color: #030303;
+    height: 2.4rem;
+}
+
+.btn-primary:hover {
+    border: 1px solid #e1ca84;
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
+    color: #030303;
+}
+
+.bg-primary {
+    background: #100b01;
+    border: 1px solid #443209;
+}
+
+.bg-secondary {
+    background: #1c1917;
+    border: 1px solid #212121;
+}
+
+.input-primary {
+    padding: 10px 59px 10px 10px;
+    border: 1px solid #443209;
+    background: #000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 40px;
+    font-weight: 300;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+body {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 54%), rgba(0, 0, 0, 100)), url(../images/home/bg.jpg);
+    width: 100%;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.user-game-points img {
+    cursor: pointer;
+}
+
+.directory-button img {
+    cursor: pointer;
+}
+
+.sticky {
+    position: sticky;
+    top: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+button {
+    cursor: pointer;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+.container {
+    width: 1600px;
+    margin: auto;
+}
+
+.white {
+    color: #fff;
+}
+
+.pink {
+    color: #ff009c;
+}
+
+.red {
+    color: #e73b54 !important;
+}
+
+.gray {
+    color: #8e8e98;
+}
+
+.violet {
+    color: #833bbd;
+}
+
+.yellow {
+    color: #ffd989 !important;
+}
+
+.green {
+    color: #3ec600;
+}
+
+.blue {
+    color: #5d8ef9;
+}
+
+.bg-dark-violet {
+    background: #996806;
+}
+
+
+.bg-gray {
+    background: #3a3b42;
+}
+
+.bg-pink {
+    background: #996806 !important;
+}
+
+.bg-violet {
+    background: #833bbd;
+}
+
+.bg-none {
+    background: transparent;
+    border: none;
+}
+
+.bg-orange {
+    background: #fb6f3e;
+}
+
+.bg-blue {
+    background: #4860e8;
+}
+
+.bg-violet {
+    background: #d32ee2 !important;
+}
+
+.relative {
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.flex-1 {
+    flex: 1 !important;
+}
+
+.flex-2 {
+    flex: 2 !important;
+}
+
+.flex-3 {
+    flex: 3 !important;
+}
+
+.flex-4 {
+    flex: 4 !important;
+}
+
+.justify-center {
+    justify-content: center !important;
+}
+
+.justify-start {
+    justify-content: start !important
 }

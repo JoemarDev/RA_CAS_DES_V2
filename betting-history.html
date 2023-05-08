@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAY CASINO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/swiper.css">
+    <link rel="stylesheet" href="./assets/css/betting-history.css">
+    <link rel="stylesheet" href="./assets/css/pagination.css">
+    <link rel="stylesheet" href="./assets/css/odometer-theme-default.css" />
+    <script src="./assets//js/tailwind.js"></script>
+    <script src="./assets/js/jquery-3.1.0.js"></script>
+
+    <script src="./assets/js/odometer.js"></script>
+
+    <script src="./assets/js/swiper-script.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="bg-theme-4">
+    <!-- Top Navigation -->
+    <div class="header bg-theme-1 text-white">
+
+        <div class="UserIsGuess">
+            <div class="container mx-auto grid grid-cols-6">
+                <div class="col-span-3"></div>
+                <!-- Header Button -->
+                <div class="col-span-3 flex justify-end items-center  py-5 ">
+                    <input class="input-1" placeholder="아이디" type="text">
+                    <input class="input-1" placeholder="비밀번호" type="password">
+                    <button class="button-1 button-bg" onclick="LoginAccount()">로그인</button>
+                    <button class="button-1 button-bg" onclick="OpenRegisterDialog()">회원가입</button>
+                </div>
+                <!-- Header Button -->
+            </div>
+        </div>
+
+        <div class="UserIsMember">
+            <div class="container mx-auto grid grid-cols-6">
+                <div class="col-span-3 flex justify-start items-center  py-5 gap-4  font-bold">
+
+                    <div class="flex gap-1 items-center">
+                        <p>카지노머니:</p>
+                        <p><span class="text-yellow-500">31,000</span></p>
+                        <p>원</p>
+                        <img class="w-8 cursor-pointer" src="./assets/new_images/icons/exchange.svg" alt="">
+
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <p>포인트:</p>
+                        <p><span class="text-yellow-500">31,000</span></p>
+                        <p>P</p>
+                        <img class="w-8 cursor-pointer" src="./assets/new_images/icons/exchange.svg" alt="">
+                    </div>
+
+
+
+                </div>
+                <!-- Header Button -->
+                <div class="col-span-3 flex justify-end items-center  py-5 ">
+
+                    <div class="flex gap-1 mr-5 font-bold">
+                        <p><span class="text-yellow-500">LV. 1</span></p>
+                        <p>홍길동 님</p>
+                    </div>
+
+
+                    <div class="flex gap-1 mr-5  font-bold">
+                        <p>보유머니:</p>
+                        <p><span class="text-yellow-500">100,000,000</span></p>
+                        <p>원</p>
+                    </div>
+                    <button class="button-1 button-bg">빠른계좌문의</button>
+                    <button class="button-1 button-bg" onclick="LougoutAccount()">로그아웃</button>
+                </div>
+                <!-- Header Button -->
+            </div>
+        </div>
+    </div>
+    <!-- Top Navigation -->
+
+    <!-- Navigation And Brand -->
+    <div class="header bg-theme-2 text-white">
+        <div class="container mx-auto grid grid-cols-7 gap-2">
+            <div class="col-span-3 links">
+                <ul class="nav-menu">
+                    <li onclick="ToogleGameTab(1)">
+                        <!-- <img src="./assets/images/navigation/1.svg" alt=""> -->
+                        <p class="text-lg" data-back="라이브 카지노" data-front="라이브 카지노"></p>
+                    </li>
+                    <li onclick="ToogleGameTab(2)">
+                        <!-- <img src="./assets/images/navigation/2.svg" alt=""> -->
+                        <p class="text-lg" data-back="슬롯 게임" data-front="슬롯 게임"></p>
+                    </li>
+                    <li onclick="ToogleGameTab(3)">
+                        <!-- <img src="./assets/images/navigation/3.svg" alt=""> -->
+                        <p class="text-lg" data-back="배팅내역" data-front="배팅내역"></p>
+                    </li>
+                    <li onclick="ToogleGameTab(4)">
+                        <!-- <img src="./assets/new_images/navigation/4.svg" alt=""> -->
+                        <p class="text-lg" data-back="고객센터" data-front="고객센터"></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-1 relative">
+                <img class="brand" style="width: 140px;" src="./assets/images/brand/logo-vertical.png" alt="">
+            </div>
+            <div class="col-span-3 links">
+                <ul class="nav-menu">
+                    <li onclick="OpenDepositTab()">
+                        <!-- <img src="./assets/images/navigation/5.svg" alt=""> -->
+                        <p class="text-lg" data-back="입금" data-front="입금"></p>
+                    </li>
+                    <li onclick="OpenWithdrawDialog()">
+                        <!-- <img src="./assets/images/navigation/6.svg" alt=""> -->
+                        <p class="text-lg" data-back="출금" data-front="출금"></p>
+                    </li>
+                    <li onclick="OpenMoneyMoveTab()">
+                        <!-- <img src="./assets/images/navigation/7.svg" alt=""> -->
+                        <p class="text-lg" data-back="공지사항" data-front="공지사항"></p>
+                    </li>
+                    <li onclick="OpenNoteTab()" class="relative">
+                        <div class="bg-red-500 px-2 h-5 font-bold text-white absolute rounded text-sm flex items-center justify-center text-xs"
+                            style="top : -18px; right : -6px;">0
+                        </div>
+                        <!-- <img src="./assets/images/navigation/8.svg" alt=""> -->
+                        <p class="text-lg" data-back="쪽지함" data-front="쪽지함"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation And Brand -->
+
+    <!-- PAGE BANNER -->
+    <div class="w-full my-5">
+        <div class="relative">
+            <div class="page-banner-title">
+                <h2>베팅내역</h2>
+            </div>
+            <img class="w-full" src="./assets/new_images/page_banner/1.png" alt="">
+        </div>
+
+    </div>
+    <!-- PAGE BANNER -->
+
+
+    <!-- PAGE CONTENT -->
+
+    <div class="my-5 container mx-auto">
+        <div class="w-full bg-secondary p-2">
+
+
+            <!-- PAGE CONTENT FILTER SECTION -->
+            <div class="flex gap-2 items-center justify-between">
+                <div class="relative">
+                    <select name="gtype" class="input-primary  text-yellow">
+                        <option value="" selected="">전체</option>
+                        <option value="C">크로스</option>
+                        <option value="S">스페셜</option>
+                        <option value="L">실시간</option>
+                        <option value="mini">미니게임</option>
+                        <option value="bom">지뢰게임</option>
+                        <option value="Vgame">가상축구</option>
+                        <option value="Vbball">가상농구</option>
+                        <option value="Vdog">개경주</option>
+                        <option value="inplay">인플레이</option>
+                    </select>
+                    <select name="btype" class="input-primary  text-yellow">
+                        <option value="" selected="">전체</option>
+                        <option value="C">머니배팅</option>
+                        <option value="P">포인트배팅</option>
+                    </select>
+
+                    <input type="text" class="input-primary  text-yellow " value="2023-05-08">
+                    <span class="text-white">~</span>
+                    <input type="text" class="input-primary  text-yellow" value="2023-05-08">
+                    <button class="btn-primary-normal text-sm  px-8 font-bold">검색</button>
+                </div>
+                <div>
+
+                    <button class="btn-primary-normal text-sm  px-8 font-bold">선택내역 첨부</button>
+                </div>
+            </div>
+            <!-- PAGE CONTENT FILTER SECTION -->
+
+
+
+
+        </div>
+
+        <div class="my-2">
+            <!-- PAGE CONTENT HISTORY TABLE -->
+            <div class="page-table-showcase-header">
+
+                <!-- Tab Showcase flex lists -->
+                <div class="table-showcase-flex-lists header">
+                    <div class="table-child-item justify-center flex-2">
+                        <span class="gray">경기일시 </span>
+                    </div>
+                    <div class="table-child-item justify-start flex-3">
+                        리그(종목)
+                    </div>
+                    <div class="table-child-item flex-4 ">
+                        승(홈/오버)
+                    </div>
+
+                    <div class="table-child-item flex-2 justify-center flex-1">
+                        무(기준)
+                    </div>
+
+                    <div class="table-child-item flex-4">
+                        패(원정/언더)
+                    </div>
+                    <div class="table-child-item justify-center">
+                        스코어
+                    </div>
+                    <div class="table-child-item justify-center ">
+                        결과
+                    </div>
+                </div>
+                <!-- Tab Showcase flex lists -->
+                <div class="table-showcase-header-body">
+
+                    <span class="white">2023/05/08</span>
+                    <span class="white">12:40 </span>
+                    <span class="white">크로스</span>
+                </div>
+
+                <!-- Tab Showcase flex lists -->
+                <div class="table-showcase-flex-lists">
+                    <div class="table-child-item justify-center flex-2">
+                        <span class="gray">10-19 16:00</span>
+                    </div>
+                    <div class="table-child-item justify-start flex-3">
+                        <img class="table-lists-showcase-icon-sm" src="assets/new_images/betting-history/2.jpg" alt="">
+                        <img class="table-lists-showcase-icon-sm" src="assets/new_images/betting-history/1.png" alt="">
+                        <span class="gray">CBA</span>
+                    </div>
+                    <div class="table-child-item flex-4 ">
+                        <div class="left-section">톈진 라이온스</div>
+                        <div class="right-section ">2.55</div>
+                    </div>
+
+                    <div class="table-child-item flex-2 justify-center flex-1">
+                        <span>VS</span>
+                    </div>
+
+                    <div class="table-child-item flex-4 bg-primary-only">
+                        <div class="left-section">1.16</div>
+                        <div class="right-section ">상하이 샤크스</div>
+                    </div>
+                    <div class="table-child-item justify-center">
+                        <span>:</span>
+                    </div>
+                    <div class="table-child-item justify-center ">
+                        <span class="white">진행중</span>
+                    </div>
+                </div>
+                <!-- Tab Showcase flex lists -->
+
+                <!-- Tab Showcase flex lists -->
+                <div class="table-showcase-flex-lists">
+                    <div class="table-child-item justify-center flex-2">
+                        <span class="gray">10-19 16:00</span>
+                    </div>
+                    <div class="table-child-item justify-start flex-3">
+                        <img class="table-lists-showcase-icon-sm" src="assets/new_images/betting-history/3.gif" alt="">
+                        <img class="table-lists-showcase-icon-sm" src="assets/new_images/betting-history/4.png" alt="">
+                        <span class="gray">KBO</span>
+                    </div>
+                    <div class="table-child-item flex-4 bg-primary-only">
+                        <div class="left-section">KT [고영표]</div>
+                        <div class="right-section ">1.55</div>
+                    </div>
+
+                    <div class="table-child-item flex-2 justify-center flex-1">
+                        <span>VS</span>
+                    </div>
+
+                    <div class="table-child-item flex-4 ">
+                        <div class="left-section">2.15</div>
+                        <div class="right-section ">키움 [애플러]</div>
+                    </div>
+                    <div class="table-child-item justify-center">
+                        <span>:</span>
+                    </div>
+                    <div class="table-child-item justify-center ">
+                        <span class="white">진행중</span>
+                    </div>
+                </div>
+                <!-- Tab Showcase flex lists -->
+
+                <!-- Tab Showcase flex lists -->
+                <div class="table-showcase-flex-lists">
+                    <div class="table-child-item justify-center flex-2">
+                        <span class="gray">10-19 16:00</span>
+                    </div>
+                    <div class="table-child-item justify-start flex-3">
+                        <img class="table-lists-showcase-icon-sm" src="assets/new_images/betting-history/3.gif" alt="">
+                        <img class="table-lists-showcase-icon-sm" src="assets/new_images/betting-history/4.png" alt="">
+                        <span class="gray">KBO [1이닝 </span>
+                    </div>
+                    <div class="table-child-item flex-4 ">
+                        <div class="left-section">KT[1이닝 득점]</div>
+                        <div class="right-section ">1.94</div>
+                    </div>
+
+                    <div class="table-child-item flex-2 justify-center flex-1">
+                        <span>VS</span>
+                    </div>
+
+                    <div class="table-child-item flex-4 bg-primary-only">
+                        <div class="left-section">1.64</div>
+                        <div class="right-section ">키움[1이닝 무득점]</div>
+                    </div>
+                    <div class="table-child-item justify-center">
+                        <span>:</span>
+                    </div>
+                    <div class="table-child-item justify-center ">
+                        <span class="white">진행중</span>
+                    </div>
+                </div>
+                <!-- Tab Showcase flex lists -->
+
+            </div>
+
+            <!-- PAGE CONTENT HISTORY TABLE -->
+        </div>
+
+        <div class="footer-statistics">
+            <input type="checkbox">
+            <label>선택</label>
+            <label>경기수 <span class="yellow">3</span></label>
+            <label>베팅금액 :10,000 </label>
+            <label>배당률 : <span class="yellow">2.94</span></label>
+            <label>예상당첨금액 :29,400</label>
+            <label>당첨금 :게임중</label>
+            <label>결과 :진행중</label>
+            <button class="text-xs">삭제하기</button>
+        </div>
+
+        <ul class="pagination">
+            <li class="cursor-pointer"><img src="assets/new_images/pagination/prev.png" alt=""></li>
+            <li class="cursor-pointer"><img src="assets/new_images/pagination/prev-single.png" alt=""></li>
+            <li class="number active cursor-pointer">1</li>
+            <li class="cursor-pointer"><img src="assets/new_images/pagination/next-single.png" alt=""></li>
+            <li class="cursor-pointer"><img src="assets/new_images/pagination/next.png" alt=""></li>
+        </ul>
+
+
+    </div>
+
+
+
+
+    <!-- PAGE CONTENT -->
+
+
+    <!-- Jackpot Odometer -->
+    <div class="container jackpot-container mx-auto grid grid-cols-6 mt-5 mb-10"
+        style="background: url('./assets/images/bg-jackpot.jpg');">
+        <div class="col-span-2"></div>
+        <div class="col-span-4 flex items-center justify-end px-4">
+            <img src="./assets/images/icons/won-sign.png" alt="">
+            <div id="odometer" class="odometer">5026992350</div>
+        </div>
+    </div>
+    <!-- Jackpot Odometer -->
+
+    <!-- Footer Section -->
+    <div class="bg-stone-900 py-10">
+        <div class="footer container mx-auto p-5 text-center ">
+            <div class="grid grid-cols-8">
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/1.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/2.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/3.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/4.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/5.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/6.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/7.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/8.png" alt="">
+                </div>
+            </div>
+            <div class="grid grid-cols-8">
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/9.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/10.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/11.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/12.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/13.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/14.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/15.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/16.png" alt="">
+                </div>
+            </div>
+            <div class="grid grid-cols-8">
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/17.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/18.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/19.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/20.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/21.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/22.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/23.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/24.png" alt="">
+                </div>
+            </div>
+            <div class="grid grid-cols-8">
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/25.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/26.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/27.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/28.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/29.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/30.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/31.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/32.png" alt="">
+                </div>
+            </div>
+            <div class="grid grid-cols-8">
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/33.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/34.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/35.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/36.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/37.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/38.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/39.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/40.png" alt="">
+                </div>
+            </div>
+            <div class="grid grid-cols-8">
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/41.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/42.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/43.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/44.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/45.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/46.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/47.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/48.png" alt="">
+                </div>
+            </div>
+            <div class="grid grid-cols-9 mb-10">
+                <div class="col-span-1"></div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/49.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/50.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/51.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/52.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/53.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/54.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/55.png" alt="">
+                </div>
+                <div class="col-span-1">
+                    <img src="./assets/images/footer/56.png" alt="">
+                </div>
+            </div>
+
+
+            <label class="text-white text-sm">
+                Copyright © 2022
+                <span class="text-theme-3">PAY CASINO.</span>
+                All right reserved.
+            </label>
+
+        </div>
+    </div>
+    <!-- Footer Section -->
+
+    <!-- LOGIN SECTION -->
+    <div class="hidden LOGIN_WRAPPER">
+
+        <div class="login-modal h-screen w-full fixed left-0 top-0 bg-theme-1/50 z-10 flex items-center justify-center">
+            <div class="login-dialog">
+                <div class="login-dialog-header py-1 relative">
+                    <img class="mx-auto" src="./assets/images/brand/logo-vertical.png" height="65">
+                    <img onclick="CloseLoginDialog()" class="cursor-pointer w-8 mx-auto absolute right-5 top-2"
+                        src="./assets/images/icons/close.svg">
+                </div>
+                <div class="login-dialog-content">
+                    <p class="text-center login-title">로그인 후 이용 가능합니다.</p>
+                    <form action="#" class="mb-5">
+                        <div class="grid grid-cols-6 mb-2 bg-theme-4 py-2">
+                            <div class="col-span-1 border-r border-theme-2">
+                                <img class="mx-auto" src="./assets/images/icons/user.svg" alt="">
+                            </div>
+                            <div class="col-span-5 px-2">
+                                <input type="text" class="text-sm">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-6 mb-2 bg-theme-4 py-2 mb-5">
+                            <div class="col-span-1 border-r border-theme-2">
+                                <img class="mx-auto" src="./assets/images/icons/lock.svg" alt="">
+                            </div>
+                            <div class="col-span-5 px-2">
+                                <input type="text" class="text-sm">
+                            </div>
+                        </div>
+                        <button onclick="LoginAccount()" style="height: 40px" class=" w-full submit-btn">로그인</button>
+                    </form>
+                    <div class="text-center">
+                        <label class="text-white text-sm">비밀번호를 잊으셨나요?</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOGIN SECTION -->
+
+    <!-- REGISTER SECTION -->
+    <div class="hidden REGISTER_WRAPPER">
+        <div
+            class="register-modal h-screen w-full fixed left-0 top-0 bg-theme-1/50 z-10 flex items-center justify-center">
+            <div class="login-dialog">
+                <div class="login-dialog-header py-1 relative">
+                    <img class="mx-auto" src="./assets/images/brand/logo-vertical.png" height="65">
+                    <img onclick="CloseRegisterDialog()" class="cursor-pointer w-8 mx-auto absolute right-5 top-2"
+                        src="./assets/images/icons/close.svg">
+                </div>
+                <div class="login-dialog-content" style="max-height: 88vh; overflow-y: scroll;">
+                    <form action="" class="mb-5 text-white">
+                        <div class="grid grid-cols-8 gap-2 items-center mb-4">
+                            <div class="col-span-2 text-right">아이디 <span class="text-red-500">*</span></div>
+                            <div class="col-span-3 pl-2">
+                                <div class="input-1 flex items-center  w-full font-semibold">
+                                    <input type="text" class=" mx-0">
+                                </div>
+                            </div>
+                            <div class="col-span-3 text-left text-sm text-white/50">아이디는 4-16자리 입니다</div>
+                        </div>
+                        <div class="grid grid-cols-8 gap-2 items-center mb-4">
+                            <div class="col-span-2 text-right">비밀번호 <span class="text-red-500">*</span></div>
+                            <div class="col-span-3 pl-2">
+                                <div class="input-1 flex items-center  w-full font-semibold">
+                                    <input type="text" class=" mx-0">
+                                </div>
+                            </div>
+                            <div class="col-span-3 text-left text-sm text-white/50">패스워드는 6-16 자리 입니다</div>
+                        </div>
+                        <div class="grid grid-cols-8 gap-2 items-center mb-4">
+                            <div class="col-span-2 text-right">비밀번호 재입력 <span class="text-red-500">*</span></div>
+                            <div class="col-span-3 pl-2">
+                                <div class="input-1 flex items-center  w-full font-semibold">
+                                    <input type="text" class=" mx-0">
+                                </div>
+                            </div>
+                            <div class="col-span-3 text-left text-sm text-white/50"></div>
+                        </div>
+                        <div class="grid grid-cols-8 gap-2 items-center mb-4">
+                            <div class="col-span-2 text-right">이름 <span class="text-red-500">*</span></div>
+                            <div class="col-span-3 pl-2">
+                                <div class="input-1 flex items-center  w-full font-semibold">
+                                    <input type="text" class=" mx-0">
+                                </div>
+                            </div>
+                            <div class="col-span-3 text-left text-sm text-white/50">이름은 한글 2-5 자리 입니다</div>
+                        </div>
+                        <div class="grid grid-cols-8 gap-2 items-center mb-4">
+                            <div class="col-span-2 text-right">전화번호 <span class="text-red-500">*</span></div>
+                            <div class="col-span-3 pl-2">
+                                <div class="input-1 flex items-center  w-full font-semibold">
+                                    <input type="text" class=" mx-0" placeholder="'-' 없이 숫자만 입력">
+                                </div>
+                            </div>
+                            <div class="col-span-3 text-left text-sm text-white/50">
+                                <button class="sms">핸드폰인증</button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-8 gap-2 items-center mb-4">
+                            <div class="col-span-2 text-right">은행명 <span class="text-red-500">*</span></div>
+                            <div class="col-span-3 pl-2">
+
+                                <select class="text-white  w-full input-1 form-control ng-pristine ng-valid ng-touched"
+                                    ng-model="signForm.BankNo">
+                                    <option value="" selected="selected" ng-bind="'Please Select a Bank' | translate"
+                                        class="ng-binding">은행을 선택해주세요
+                                    </option>
+                                    <option value="1">SC제일은행</option>
+                                    <option value="2">경남은행</option>
+                                    <option value="3">광주은행</option>
+                                    <option value="4">국민은행</option>
+                                    <option value="27">신한은행</option>
+                                    <option value="6">기업은행</option>
+                                    <option value="7">농협중앙회</option>
+                                    <option value="8">농협회원조합</option>
+                                    <option value="9">대구은행</option>
+                                    <option value="10">대신증권</option>
+                                    <option value="11">대우증권</option>
+                                    <option value="12">동부증권</option>
+                                    <option value="13">동양종합금융증권</option>
+                                    <option value="14">메리츠증권</option>
+                                    <option value="15">미래에셋증권</option>
+                                    <option value="16">뱅크오브아메리카(BOA)</option>
+                                    <option value="17">부국증권</option>
+                                    <option value="18">부산은행</option>
+                                    <option value="19">산림조합중앙회</option>
+                                    <option value="20">산업은행</option>
+                                    <option value="21">삼성증권</option>
+                                    <option value="22">상호신용금고</option>
+                                    <option value="23">새마을금고</option>
+                                    <option value="24">수출입은행</option>
+                                    <option value="25">수협중앙회</option>
+                                    <option value="26">신영증권</option>
+                                    <option value="5">신한금융투자</option>
+                                    <option value="28">신협중앙회</option>
+                                    <option value="29">에스케이증권</option>
+                                    <option value="30">에이치엠씨투자증권</option>
+                                    <option value="31">엔에이치투자증권</option>
+                                    <option value="32">엘아이지투자증권</option>
+                                    <option value="33">외환은행</option>
+                                    <option value="34">우리은행</option>
+                                    <option value="35">우리투자증권</option>
+                                    <option value="36">우체국</option>
+                                    <option value="37">유진투자증권</option>
+                                    <option value="38">전북은행</option>
+                                    <option value="39">제주은행</option>
+                                    <option value="40">키움증권</option>
+                                    <option value="41">하나대투증권</option>
+                                    <option value="42">하나은행</option>
+                                    <option value="43">하이투자증권</option>
+                                    <option value="44">한국씨티은행</option>
+                                    <option value="45">한국투자증권</option>
+                                    <option value="46">한화증권</option>
+                                    <option value="47">KB(구현대)증권</option>
+                                    <option value="49">홍콩상하이은행</option>
+                                    <option value="53">카카오뱅크</option>
+                                    <option value="54">케이뱅크</option>
+                                    <option value="56">토스뱅크</option>
+                                    <option value="57">토스증권</option>
+                                </select>
+
+                            </div>
+                            <div class="col-span-3 text-left text-sm text-white/50">
+
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-8 gap-2 items-center mb-4">
+                            <div class="col-span-2 text-right">계좌번호 <span class="text-red-500">*</span></div>
+                            <div class="col-span-3 pl-2">
+                                <div class="input-1 flex items-center  w-full font-semibold">
+                                    <input type="text" class=" mx-0" placeholder="계좌번호">
+                                </div>
+                            </div>
+                            <div class="col-span-3 text-left text-sm text-white/50">
+
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-8 gap-2 items-center mb-4">
+                            <div class="col-span-2 text-right">추천인</div>
+                            <div class="col-span-3 pl-2">
+                                <div class="input-1 flex items-center  w-full font-semibold">
+                                    <input type="text" class=" mx-0" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-span-3 text-left text-sm text-white/50">
+                                ID가 없으시면 비워두셔도 됩니다.
+                            </div>
+                        </div>
+
+
+
+                    </form>
+                    <div class="signup-info">
+                        <ul>
+                            <li>타명의 가입시 사유 불문 승인 거부되실 수 있습니다.</li>
+                            <li>본인이 등록한 계좌로만 입금이 가능합니다.</li>
+                            <li>가입신청하신후 승인 전화를 꼭 받아주세요.</li>
+                            <li>무단으로 중복가입 시 사전 통보없이 등급 강등, 차단 되실 수 있습니다.</li>
+                            <li>미성년자는 승인시 가입이 거부됩니다.</li>
+                            <li>가입자명과 예금주 반드시 일치해야합니다.</li>
+                            <li>보안을 위해 입금계좌는 자주 변경됩니다. 항상 입금계좌 확인 후 입금 부탁드립니다.</li>
+                            <li>1:1 전용계좌 서비스도 이용이 가능하니 고객센터에 문의해주세요 *</li>
+                        </ul>
+                    </div>
+
+                    <button style="height: 40px" class=" w-full submit-btn">회원가입</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- REGISTER SECTION -->
+
+
+</body>
+<script src="./assets/js/script.js"></script>
+
+</html>

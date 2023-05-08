@@ -4,39 +4,27 @@ let isLogin = true;
 
 
 
+$('.brand').click(() => {
+    window.location.href = "index.html"
+});
 
 const ToogleGameTab = (val) => {
     $('.links').removeClass('active')
-    $('.game-container').hide();
+    // $('.game-container').hide();
 
     if (val === 1) {
-        $(".live-box").show()
-        $(".live").addClass('active')
-        $('html, body').animate({
-            scrollTop: $(".live").offset().top
-        }, 600);
+        window.location.href = "casino.html"
+    }
 
-    }
     if (val === 2) {
-        $(".slot-box").show()
-        $(".slot").addClass('active')
-        $('html, body').animate({
-            scrollTop: $(".slot").offset().top
-        }, 600);
+        window.location.href = "slot.html"
     }
+
     if (val === 3) {
-        $(".sports-box").show()
-        $(".sports").addClass('active')
-        $('html, body').animate({
-            scrollTop: $(".sports").offset().top
-        }, 600);
+        window.location.href = "betting-history.html"
     }
     if (val === 4) {
-        $(".arcade-box").show()
-        $(".arcade").addClass('active')
-        $('html, body').animate({
-            scrollTop: $(".arcade").offset().top
-        }, 600);
+        window.location.href = "qna.html"
     }
 }
 const OpenLoginDialog = () => {
@@ -201,17 +189,11 @@ const OpenMoneyMoveTab = () => {
 }
 
 const OpenDepositTab = () => {
-    OpenAccountDialog();
-    ResetTabs()
-    $('.DEP_tab').addClass('tab-active')
-    $('.deposit_dialog').show()
+    window.location.href = "deposit.html"
 }
 
 const OpenWithdrawDialog = () => {
-    OpenAccountDialog();
-    ResetTabs()
-    $('.WIT_tab').addClass('tab-active')
-    $('.withdrawal_dialog').show()
+    window.location.href = "withdrawal.html"
 }
 
 
