@@ -53,14 +53,16 @@
                         <p>카지노머니:</p>
                         <p><span class="text-yellow-500">31,000</span></p>
                         <p>원</p>
-                        <img class="w-8 cursor-pointer" src="./assets/new_images/icons/exchange.svg" alt="">
+                        <img onclick="GoToTransferMoney()" class="w-8 cursor-pointer"
+                            src="./assets/new_images/icons/exchange.svg" alt="">
 
                     </div>
                     <div class="flex gap-1 items-center">
                         <p>포인트:</p>
                         <p><span class="text-yellow-500">31,000</span></p>
                         <p>P</p>
-                        <img class="w-8 cursor-pointer" src="./assets/new_images/icons/exchange.svg" alt="">
+                        <img onclick="GoToTransferMoney()" class="w-8 cursor-pointer"
+                            src="./assets/new_images/icons/exchange.svg" alt="">
                     </div>
 
 
@@ -160,9 +162,12 @@
     <div class="my-5 container mx-auto">
         <div class="w-full">
             <div class="flex rounded overflow-hidden mb-2">
-                <div class="cursor-pointer w-full py-2  text-center font-bold bg-white">충전신청</div>
-                <div class=" cursor-pointer w-full py-2  text-center font-bold bg-primary-only">환전신청</div>
-                <div class=" cursor-pointer w-full py-2  text-center font-bold bg-white">포인트전환 내역</div>
+                <div onclick="window.location.href='deposit.html'"
+                    class="cursor-pointer w-full py-2  text-center font-bold bg-white">충전신청</div>
+                <div onclick="window.location.href='withdrawal.html'"
+                    class=" cursor-pointer w-full py-2  text-center font-bold bg-primary-only">환전신청</div>
+                <div onclick="window.location.href='point-history.html'"
+                    class=" cursor-pointer w-full py-2  text-center font-bold bg-white">포인트전환 내역</div>
             </div>
 
             <div class="p-5 rounded bg-stone-900 text-white border border-stone-700 mb-2">
@@ -201,7 +206,7 @@
                         <td>
                             <div class="transaction-child-content">
                                 <div class="transaction-content-flex">
-                                    <img src="../assets/images/svg/wallet.svg" alt="">
+                                    <img src="./assets/new_images/icons/wallet.svg" alt="">
                                     <label><span class="yellow">31,000</span> 원</label>
                                 </div>
                             </div>
@@ -222,7 +227,7 @@
                                     <button class="transaction-money-button">10만원</button>
                                     <button class="transaction-money-button">50만원</button>
                                     <button class="transaction-money-button">100만원</button>
-                                    <button class="transaction-money-button gray">정정</button>
+                                    <button class="transaction-money-button active">정정</button>
                                 </div>
                             </div>
                         </td>

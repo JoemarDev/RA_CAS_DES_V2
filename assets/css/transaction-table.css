@@ -8,7 +8,7 @@
 
 .transaction-table tbody th {
     padding: 12px 0;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 700;
     color: #d6d6de;
     background: #212121;
@@ -71,30 +71,39 @@ label {
 }
 
 .transaction-table tbody td .transaction-child-content .account-number {
-    border: 0;
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
-    border-radius: 5px;
-    background: #3a3b42;
-    border: 0;
+    padding: 10px 59px 10px 10px;
+    border: 1px solid #443209;
+    background: #000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     height: 40px;
-    padding: 0 10px;
-    width: 150px;
+    font-weight: 300;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+    color: #ffd273;
+    font-weight: 600;
 }
 
 .transaction-table tbody td .transaction-child-content .amount-input {
-    border: 0;
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
-    border-radius: 5px;
-    background: #3a3b42;
-    border: 0;
+    padding: 10px 59px 10px 10px;
+    border: 1px solid #443209;
+    background: #000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     height: 40px;
-    padding: 0 10px;
-    width: 100px;
-    margin-right: 10px;
+    font-weight: 300;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+    color: #ffd273;
+    font-weight: 600;
 }
 
 
@@ -104,19 +113,35 @@ label {
     display: block;
 }
 
+.transaction-table tbody td .transaction-money-button.active {
+    /* border: 1px solid #e1ca84; */
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
+    color: #030303;
+}
+
 .transaction-table tbody td .transaction-money-button {
-    width: 84px;
-    height: 40px;
-    margin-right: 5px;
-    background: #008000;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
-    border-radius: 6px;
-    box-shadow: 2px 2px 1px #063606;
-    border: none;
-    cursor: pointer;
+    background: #100b01;
+    border: 1px solid #443209;
+    color: #dac179;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 10px;
+    width: 80px;
+    margin-right: 2px;
+    border-radius: 2px;
+}
+
+
+.transaction-table tbody td .transaction-money-button:hover {
+    border: 1px solid #e1ca84;
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
+    color: #030303;
 }
 
 
@@ -130,13 +155,7 @@ label {
     box-shadow: -2px -2px 1px #67686d;
 }
 
-.transaction-table tbody td .transaction-money-button:hover {
-    position: relative;
-    left: 2px;
-    top: 2px;
-    background: #008000;
-    box-shadow: -2px -2px 1px #063606;
-}
+
 
 .submit-trasaction-button-container {
     text-align: center;
@@ -144,37 +163,43 @@ label {
 }
 
 .submit-transaction-button {
-    width: 184px;
-    height: 56px;
-    line-height: 60px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 700;
-    color: #fff;
-    background: #03a9f4;
-    border-radius: 33px;
-    box-shadow: 3px 3px 1px #000000;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
+    border: 1px solid #e1ca84;
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
+    color: #030303;
+    height: 3rem;
+    width: 300px;
+    font-weight: 600;
+    font-size: 24px;
+    border-radius: 5px;
 
+}
+
+.submit-transaction-button:hover {
+    background: #1e170f;
+    color: #e1ca84;
 }
 
 
 .submit-transaction-button-2 {
-    width: 184px;
-    height: 56px;
-    line-height: 60px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 700;
-    color: #fff;
-    background: #b63b20;
-    border-radius: 33px;
-    box-shadow: 3px 3px 0px #da5537;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
+    border: 1px solid #e1ca84;
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
+    color: #030303;
+    height: 3rem;
+    width: 300px;
+    font-weight: 600;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.submit-transaction-button-2:hover {
+    background: #1e170f;
+    color: #e1ca84;
 }
 
 
@@ -230,19 +255,33 @@ label {
 
 
 .transfer-button {
-    color: #000;
-    border-radius: 10px;
-    font-size: 18px;
+    border: 1px solid #e1ca84;
+    color: #030303;
+    height: 3rem;
+    width: 300px;
     font-weight: 600;
-    padding: 10px 30px;
+    font-size: 14px;
+    border-radius: 5px;
+    background: #0e0d0d;
+    color: #e1ca84;
 }
 
-.transfer-button:nth-child(1) {
-    color: #fff;
-    background: #ff009c;
-}
 
-.transfer-button:nth-child(2) {
+.transfer-button:nth-child(1):hover {
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
     color: #000;
-    background: #22ebff;
+}
+
+
+
+.transfer-button:nth-child(2):hover {
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
+    color: #000;
+
 }

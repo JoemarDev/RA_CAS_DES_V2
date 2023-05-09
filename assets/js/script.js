@@ -3,6 +3,28 @@ let isLogin = true;
 
 
 
+$('.memo-table td:odd').click(function () {
+    $(this).parent().next().toggle();
+});
+
+const PagePopupHandler = () => $('.page-body-pop-up').toggle();
+
+const PageChildHandler = (elem, type) => {
+    $('.page-tab-menu-child').removeClass('bg-primary-only')
+    $(elem).addClass('bg-primary-only');
+
+    if (type == 1) {
+        $('.popup-child-content-1').show();
+        $('.popup-child-content-2').hide();
+    } if (type ==
+        2) {
+        $('.popup-child-content-1').hide();
+        $('.popup-child-content-2').show();
+    }
+}
+
+
+
 
 $('.brand').click(() => {
     window.location.href = "index.html"
@@ -167,10 +189,7 @@ const OpenInquiryTab = () => {
 
 
 const OpenNoteTab = () => {
-    OpenPageDialog();
-    ResetTabs()
-    $('.NT_TAB').addClass('tab-active')
-    $('.notebox_dialog').show()
+    window.location.href = "memo.html";
 }
 
 const OpenPartnerTab = () => {
@@ -182,10 +201,7 @@ const OpenPartnerTab = () => {
 
 
 const OpenMoneyMoveTab = () => {
-    OpenAccountDialog();
-    ResetTabs()
-    $('.MON_tab').addClass('tab-active')
-    $('.money_move_dialog').show()
+    window.location.href = "announcement.html"
 }
 
 const OpenDepositTab = () => {
@@ -249,3 +265,5 @@ const ListInquiry = () => {
     $('.write_inquiry').hide();
     $('.inquiry_lists').show()
 }
+
+const GoToTransferMoney = () => window.location.href = "transfer-money.html"

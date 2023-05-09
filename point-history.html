@@ -9,14 +9,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/swiper.css">
-    <link rel="stylesheet" href="./assets/css/odometer-theme-default.css" />
-
     <link rel="stylesheet" href="./assets/css/qna.css">
     <link rel="stylesheet" href="./assets/css/transaction-table.css">
     <link rel="stylesheet" href="./assets/css/pagination.css">
-    <link rel="stylesheet" href="./assets/css/pop-up.css">
-
-
+    <link rel="stylesheet" href="./assets/css/odometer-theme-default.css" />
     <script src="./assets//js/tailwind.js"></script>
     <script src="./assets/js/jquery-3.1.0.js"></script>
 
@@ -152,7 +148,7 @@
     <div class="w-full my-5">
         <div class="relative">
             <div class="page-banner-title">
-                <h2>슬롯게임</h2>
+                <h2>포인트전환 내역</h2>
             </div>
             <img class="w-full" src="./assets/new_images/page_banner/1.png" alt="">
         </div>
@@ -160,238 +156,124 @@
     </div>
     <!-- PAGE BANNER -->
 
-    <div class="relative container mx-auto my-5">
-        <button onclick="PagePopupHandler()" class="btn-primary py-2 w-full">슬롯게임 머니전환</button>
-    </div>
 
-    <!-- Slot Game Box -->
-    <div class="slot-box  game-container container mx-auto  ">
-        <div class="  grid grid-cols-6  gap-3 ">
-            <div class="game-button" style="background : url('./assets/images/slot/1.jpg')">
-                <div class="game-button-title">프라그마틱플레이</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">프라그마틱플레이</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/2.jpg')">
-                <div class="game-button-title">넷엔트</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">넷엔트</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/3.jpg')">
-                <div class="game-button-title">플레이앤고</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">플레이앤고</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/4.jpg')">
-                <div class="game-button-title">하바네로</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">하바네로</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/5.jpg')">
-                <div class="game-button-title">마이크로게이밍</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">마이크로게이밍</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/6.jpg')">
-                <div class="game-button-title">아시아게이밍</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">아시아게이밍</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/7.jpg')">
-                <div class="game-button-title">플레이테크</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">플레이테크</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/8.jpg')">
-                <div class="game-button-title">게임플레이</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">게임플레이</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/9.jpg')">
-                <div class="game-button-title">비비아이엔</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">비비아이엔</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/10.jpg')">
-                <div class="game-button-title">이그드라실</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">이그드라실</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/11.jpg')">
-                <div class="game-button-title">레드타이거</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">레드타이거</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/12.jpg')">
-                <div class="game-button-title">부운고</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">부운고</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/13.jpg')">
-                <div class="game-button-title">씨큐나인게이밍</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">씨큐나인게이밍</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/15.jpg')">
-                <div class="game-button-title">포켓게임스</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">포켓게임스</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/16.jpg')">
-                <div class="game-button-title">리얼타임게이밍</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">리얼타임게이밍</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/17.jpg')">
-                <div class="game-button-title">스카이윈드</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">스카이윈드</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/18.jpg')">
-                <div class="game-button-title">스페이드게이밍</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">스페이드게이밍</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/19.jpg')">
-                <div class="game-button-title">탑트렌드게이밍</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">탑트렌드게이밍</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/20.jpg')">
-                <div class="game-button-title">드림테크</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">드림테크</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/21.jpg')">
-                <div class="game-button-title">벳소프트</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">벳소프트</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/22.jpg')">
-                <div class="game-button-title">퀵스핀</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">퀵스핀</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/23.jpg')">
-                <div class="game-button-title">레드레이크</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">레드레이크</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/24.jpg')">
-                <div class="game-button-title">릴렉스게이밍</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">릴렉스게이밍</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/25.jpg')">
-                <div class="game-button-title">플레이손</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">플레이손</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/26.jpg')">
-                <div class="game-button-title">블루프린트</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">블루프린트</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/27.jpg')">
-                <div class="game-button-title">에보플레이</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">에보플레이</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/28.jpg')">
-                <div class="game-button-title">가마트론</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">가마트론</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/30.jpg')">
-                <div class="game-button-title">올웨이스핀</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">올웨이스핀</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/31.jpg')">
-                <div class="game-button-title">드래곤게이밍</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">드래곤게이밍</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/32.jpg')">
-                <div class="game-button-title">톰혼</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">톰혼</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/33.jpg')">
-                <div class="game-button-title">비비테크</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">비비테크</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/34.jpg')">
-                <div class="game-button-title">스피노미널</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">스피노미널</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/35.jpg')">
-                <div class="game-button-title">만칼라게이밍</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">만칼라게이밍</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/slot/36.jpg')">
-                <div class="game-button-title">아메바</div>
-                <div class="overlay">
-                    <button class="overlay-button" onclick="OpenLoginDialog()">아메바</button>
-                </div>
-            </div>
-            <div class="game-button" style="background : url('./assets/images/button-coming-soon.jpg')">
+    <!-- PAGE CONTENT -->
 
+    <div class="my-5 container mx-auto">
+        <div class="w-full">
+            <div class="flex rounded overflow-hidden mb-2">
+                <div onclick="window.location.href='deposit.html'"
+                    class="cursor-pointer w-full py-2  text-center font-bold bg-white">충전신청</div>
+                <div onclick="window.location.href='withdrawal.html'"
+                    class=" border-x cursor-pointer w-full py-2  text-center font-bold bg-white">환전신청</div>
+                <div onclick="window.location.href='point-history.html'"
+                    class=" cursor-pointer w-full py-2  text-center font-bold bg-primary-only">포인트전환 내역</div>
             </div>
-            <div class="game-button" style="background : url('./assets/images/button-coming-soon.jpg')">
 
+            <div class="p-5 rounded bg-stone-900 text-white border border-stone-700 mb-2">
+                <div class="flex items-center gap-1">
+                    <img class="w-8" src="./assets/new_images/icons/warning.svg" alt="">
+                    <h2 class="text-yellow font-bold text-xl mb-2">포인트전환 내역</h2>
+                </div>
+
+                <div class="pl-9  leading-8 font-normal">
+                    <p class="font-normal">① 5,000 포인트 부터 전환 가능합니다.</p>
+                    <p class="font-normal">② 보유머니로 전환 하시고 배팅 가능합니다.</p>
+
+                </div>
             </div>
+
+
+            <div class="transaction-history-table-container">
+                <h3>◎포인트전환 내역</h3>
+
+                <table class="transaction-history-table text-center">
+                    <thead>
+                        <tr>
+                            <th>전환시간</th>
+                            <th>내용</th>
+                            <th>금액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2022-10-11 05:15:48 </td>
+                            <td><span class="yellow">[포인트] 보유머니로 전환</span></td>
+                            <td><strong class="white">5,000 원</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2022-10-11 05:15:48 </td>
+                            <td><span class="yellow">[포인트] 보유머니로 전환</span></td>
+                            <td><strong class="white">5,000 원</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2022-10-11 05:15:48 </td>
+                            <td><span class="yellow">[포인트] 보유머니로 전환</span></td>
+                            <td><strong class="white">5,000 원</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2022-10-11 05:15:48 </td>
+                            <td><span class="yellow">[포인트] 보유머니로 전환</span></td>
+                            <td><strong class="white">5,000 원</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2022-10-11 05:15:48 </td>
+                            <td><span class="yellow">[포인트] 보유머니로 전환</span></td>
+                            <td><strong class="white">5,000 원</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2022-10-11 05:15:48 </td>
+                            <td><span class="yellow">[포인트] 보유머니로 전환</span></td>
+                            <td><strong class="white">5,000 원</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2022-10-11 05:15:48 </td>
+                            <td><span class="yellow">[포인트] 보유머니로 전환</span></td>
+                            <td><strong class="white">5,000 원</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2022-10-11 05:15:48 </td>
+                            <td><span class="yellow">[포인트] 보유머니로 전환</span></td>
+                            <td><strong class="white">5,000 원</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2022-10-11 05:15:48 </td>
+                            <td><span class="yellow">[포인트] 보유머니로 전환</span></td>
+                            <td><strong class="white">5,000 원</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2022-10-11 05:15:48 </td>
+                            <td><span class="yellow">[포인트] 보유머니로 전환</span></td>
+                            <td><strong class="white">5,000 원</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ul class="pagination">
+                <li><img src="./assets/new_images/pagination/prev.png" alt=""></li>
+                <li><img src="./assets/new_images/pagination/prev-single.png" alt=""></li>
+                <li class="number active">1</li>
+                <li class="number">2</li>
+                <li class="number">3</li>
+
+                <li><img src="./assets/new_images/pagination/next-single.png" alt=""></li>
+                <li><img src="./assets/new_images/pagination/next.png" alt=""></li>
+            </ul>
+
+
+
+
+
 
         </div>
     </div>
-    <!-- Slot Game Box -->
 
-    <!-- Jackpot Odometer -->
-    <div class="container jackpot-container mx-auto grid grid-cols-6 mt-5 mb-10"
-        style="background: url('./assets/images/bg-jackpot.jpg');">
-        <div class="col-span-2"></div>
-        <div class="col-span-4 flex items-center justify-end px-4">
-            <img src="./assets/images/icons/won-sign.png" alt="">
-            <div id="odometer" class="odometer">5026992350</div>
-        </div>
-    </div>
-    <!-- Jackpot Odometer -->
+
+
+
+    <!-- PAGE CONTENT -->
+
 
     <!-- Footer Section -->
     <div class="bg-stone-900 py-10">
@@ -582,8 +464,7 @@
 
 
             <label class="text-white text-sm">
-                Copyright © 2022
-                <span class="text-theme-3">PAY CASINO.</span>
+                Copyright © 202305 09 <span class="text-theme-3">PAY CASINO.</span>
                 All right reserved.
             </label>
 
@@ -808,204 +689,6 @@
         </div>
     </div>
     <!-- REGISTER SECTION -->
-
-
-    <!-- BODY POPUP -->
-    <div class="page-body-pop-up hidden" style="background: rgb(0, 0, 0);">
-        <div class="pop-up-overlay"></div>
-        <div class="pop-up-body">
-            <div class="pop-up-header">
-                <h3 class="font-bold">카지노 머니전환</h3>
-                <button onclick="PagePopupHandler()" class="popup-close"><img src="./assets/new_images/icons/close.png"
-                        alt=""></button>
-            </div>
-
-            <!-- Page Tab Menu -->
-
-            <div class="flex rounded overflow-hidden mb-2">
-                <div onclick="PageChildHandler(this,1)"
-                    class=" page-tab-menu-child cursor-pointer w-full py-2  text-center font-bold bg-white bg-primary-only">
-                    카지노
-                    머니
-                    이동</div>
-                <div onclick="PageChildHandler(this,2)"
-                    class="page-tab-menu-child border-r cursor-pointer w-full py-2  text-center font-bold bg-white">머니전환
-                    내역</div>
-
-            </div>
-
-            <!-- Page Tab Menu -->
-
-            <div class="popup-child-content-1">
-                <!-- Page Section memo -->
-                <div class="p-5 rounded bg-stone-900 text-white border border-stone-700 mb-2">
-                    <div class="flex items-center gap-1">
-                        <img class="w-8" src="./assets/new_images/icons/warning.svg" alt="">
-                        <h2 class="text-yellow font-bold text-xl mb-2">필독/주의사항</h2>
-                    </div>
-
-                    <div class="pl-9  leading-8">
-                        <p class="font-normal">① 에볼루션 = 배팅상한가 1,000만 / 각 테이블 마다 상이함</p>
-                        <p class="font-normal">② 카지노는 게임별 / 테이블별 금액 설정이 다릅니다.</p>
-                        <p class="font-normal">③ 입장전에 상한가 선택후 입장 부탁드립니다.</p>
-                        <p class="font-normal">④ 살롱 프라이빗은 2,500만원 까지 이용가능합니다.</p>
-
-                    </div>
-                </div>
-
-                <!-- Page Section memo -->
-
-
-                <!-- Trasaction Table -->
-                <table class="transaction-table">
-                    <tbody>
-                        <tr>
-                            <th>입금자명</th>
-                            <td>
-                                <div class="transaction-child-content">
-                                    <input class="account-number" type="text" value="test01" disabled="">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>보유머니</th>
-                            <td>
-                                <div class="transaction-child-content">
-                                    <div class="transaction-content-flex">
-                                        <img src="./assets/new_images/icons/wallet.svg" alt="">
-                                        <label><span style="color: #ff009c">31,000</span> 원</label>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>라이브카지노 게임머니</th>
-                            <td>
-                                <div class="transaction-child-content">
-                                    <div class="transaction-content-flex">
-                                        <img src="./assets/new_images/icons/wallet.svg" alt="">
-                                        <label><span style="color: #22ebff">31,000</span> 원</label>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <th>머니이동</th>
-                            <td>
-                                <div class="transaction-child-content">
-                                    <span class="red warning-text-notice">
-                                        라이브카지노를 이용하기 위해서는 게임머니 이동이 필요합니다. <br>
-                                        필요하신 금액만 이동하여 게임을 즐겨보세요.<br>
-                                        라이브카지노로 이동한 보유머니는 언제든지 보유머니로 다시 이동할 수 있습니다.
-                                    </span>
-
-                                    <div class="transaction-content-flex">
-                                        <input class="amount-input" type="text">
-                                        <button class="transaction-money-button">1만원</button>
-                                        <button class="transaction-money-button">3만원</button>
-                                        <button class="transaction-money-button">5만원</button>
-                                        <button class="transaction-money-button">10만원</button>
-                                        <button class="transaction-money-button">50만원</button>
-                                        <button class="transaction-money-button">100만원</button>
-                                        <button class="transaction-money-button active">정정</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="submit-trasaction-button-container">
-                    <button class="transfer-button">
-                        보유머니 -&gt; 라이브카지노 게임머니로 이동
-                    </button>
-                    <button class="transfer-button">
-                        라이브카지노 게임머니 -&gt; 보유머니로 이동
-                    </button>
-                </div>
-            </div>
-
-            <div class="popup-child-content-2" style="display: none">
-                <div class="transaction-history-table-container">
-
-                    <table class="transaction-history-table text-center">
-                        <thead>
-                            <tr>
-                                <th>전환시간</th>
-                                <th>내용</th>
-                                <th>금액</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2022-10-11 05:15:48 </td>
-                                <td><span class="yellow">[보유머니] 카지노 머니로 전환</span></td>
-                                <td><strong class="white">500,000 원</strong></td>
-                            </tr>
-                            <tr>
-                                <td>2022-10-11 05:15:48 </td>
-                                <td><span class="yellow">[보유머니] 카지노 머니로 전환</span></td>
-                                <td><strong class="white">500,000 원</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td>2022-10-11 05:15:48 </td>
-                                <td><span class="yellow">[보유머니] 카지노 머니로 전환</span></td>
-                                <td><strong class="white">500,000 원</strong></td>
-                            </tr>
-                            <tr>
-                                <td>2022-10-11 05:15:48 </td>
-                                <td><span class="yellow">[보유머니] 카지노 머니로 전환</span></td>
-                                <td><strong class="white">500,000 원</strong></td>
-                            </tr>
-                            <tr>
-                                <td>2022-10-11 05:15:48 </td>
-                                <td><span class="yellow">[보유머니] 카지노 머니로 전환</span></td>
-                                <td><strong class="white">500,000 원</strong></td>
-                            </tr>
-                            <tr>
-                                <td>2022-10-11 05:15:48 </td>
-                                <td><span class="yellow">[보유머니] 카지노 머니로 전환</span></td>
-                                <td><strong class="white">500,000 원</strong></td>
-                            </tr>
-                            <tr>
-                                <td>2022-10-11 05:15:48 </td>
-                                <td><span class="yellow">[보유머니] 카지노 머니로 전환</span></td>
-                                <td><strong class="white">500,000 원</strong></td>
-                            </tr>
-                            <tr>
-                                <td>2022-10-11 05:15:48 </td>
-                                <td><span class="yellow">[보유머니] 카지노 머니로 전환</span></td>
-                                <td><strong class="white">500,000 원</strong></td>
-                            </tr>
-                            <tr>
-                                <td>2022-10-11 05:15:48 </td>
-                                <td><span class="yellow">[보유머니] 카지노 머니로 전환</span></td>
-                                <td><strong class="white">500,000 원</strong></td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <ul class="pagination">
-                        <li><img src="../assets/images/pagination/prev.png" alt=""></li>
-                        <li><img src="../assets/images/pagination/prev-single.png" alt=""></li>
-                        <li class="number active">1</li>
-                        <li class="number">2</li>
-                        <li class="number">3</li>
-
-                        <li><img src="../assets/images/pagination/next-single.png" alt=""></li>
-                        <li><img src="../assets/images/pagination/next.png" alt=""></li>
-                    </ul>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- BODY POPUP -->
-
 
 
 </body>
